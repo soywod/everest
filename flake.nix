@@ -33,6 +33,8 @@
           devShell = pkgs.mkShell {
             RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
             buildInputs = with pkgs; [
+              openssl.dev
+              pkgconfig
               cargo
               cargo-watch
               trunk
